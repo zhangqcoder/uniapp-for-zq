@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "uni-hold-tabbar": "^1.0.0",
+    "uni-read-pages": "^1.0.5"
+  }
+}

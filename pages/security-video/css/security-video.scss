@@ -1,0 +1,56 @@
+page {
+	height: 100%;
+}
+.securityVideo{
+	height: 100%;
+	
+	.selector {
+		display: flex;
+		align-items: center;
+		height: 80rpx;
+		font-size: 30rpx;
+		position: fixed;
+		top: 44px;
+		left: 0;
+		width: 100%;
+		z-index: 9;
+		background: #fff;
+		border-bottom: 1rpx solid #dee1e6;
+		view{
+			height: 60rpx;
+			line-height: 60rpx;
+			width: 50%;
+			text-align: center;
+		}
+		.split{
+			width: 1rpx;
+			height: 40rpx;
+			line-height: 60rpx;
+			display: inline-block;
+			background: $uni-border-color;
+		}
+		.active {
+			color: $uni-chart-bg;
+		}
+	}
+	.search{
+		width:100%;
+		height:97rpx;
+		background: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0rpx 3.5%;
+		box-sizing: border-box;
+		position: fixed;
+		top: 44px;
+		margin-top: 80rpx;
+		z-index: 2;
+		
+	}
+	.videoWrap{
+		margin-top: 164rpx;
+
+	}
+}
+

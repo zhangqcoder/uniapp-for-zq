@@ -1,0 +1,135 @@
+{
+	"pages": [{
+			//启动页
+			"path": "pages/loading-page/loading-page",
+			"aliasPath": "/",
+			"style": {
+				"h5": {
+					//隐藏顶部标题
+					"titleNView": false
+				},
+				"app-plus": {
+					//隐藏顶部标题
+					"titleNView": false
+
+				}
+
+			}
+		}, {
+			//登录页
+			"path": "pages/login/login",
+			"name": "login",
+			"style": {
+				"h5": {
+					//隐藏顶部标题
+					"titleNView": false
+				},
+				"app-plus": {
+					//隐藏顶部标题
+					"titleNView": false
+				}
+			}
+		}, {
+			//首页
+			"path": "pages/index/index",
+			"name": "home",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "首页",
+				"navigationBarBackgroundColor": "#5AA8FF",
+				"backgroundColor": "#000",
+				"h5": {
+					//隐藏顶部标题
+					"titleNView": false
+				},
+				"app-plus": {
+					//隐藏顶部标题
+					"titleNView": false
+				}
+			}
+		}, {
+			//曲线分析页面
+			"path": "pages/data-curve/curve",
+			"name": "curve",
+			"style": {
+				"navigationBarTitleText": "曲线分析",
+				"enablePullDownRefresh": true,
+				"navigationBarBackgroundColor": "#5AA8FF",
+				"navigationBarTextStyle": "white"
+
+			}
+		}, {
+			//安防视频
+			"path": "pages/security-video/security-video",
+			"name": "security-video",
+			"style": {
+				"navigationBarTitleText": "安防视频",
+				"navigationBarBackgroundColor": "#5AA8FF",
+				"navigationBarTextStyle": "white"
+
+			}
+		}, {
+			//安防视频
+			"path": "pages/security-video/video-player",
+			"name": "video-player",
+			"style": {
+				"navigationBarTitleText": "安防视频",
+				"navigationBarBackgroundColor": "#5AA8FF",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			//仪表盘
+			"path": "pages/gauge/gauge",
+			"name": "gauge",
+			"style": {
+				"navigationBarTitleText": "仪表盘视频",
+				"navigationBarBackgroundColor": "#5AA8FF",
+				"navigationBarTextStyle": "white"
+			}
+		}
+
+	],
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#6fb2fd",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"text": "首页",
+				"iconPath": "static/images/tabbar/home1.png",
+				"selectedIconPath": "static/images/tabbar/home.png"
+
+			}, {
+				"pagePath": "pages/security-video/security-video",
+				"text": "视频",
+				"iconPath": "static/images/tabbar/home1.png",
+				"selectedIconPath": "static/images/tabbar/home.png"
+			},
+			{
+				"pagePath": "pages/data-curve/curve",
+				"text": "曲线",
+				"iconPath": "static/images/tabbar/home1.png",
+				"selectedIconPath": "static/images/tabbar/home.png"
+			},
+			//仪表盘
+			{
+				"pagePath": "pages/gauge/gauge",
+				"text": "仪表盘",
+				"iconPath": "static/images/tabbar/home1.png",
+				"selectedIconPath": "static/images/tabbar/home.png"
+			}
+		]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uniapp",
+		"navigationBarBackgroundColor": "#F7F7F7",
+		"backgroundColor": "#F7F7F7"
+
+	},
+	"easycom": {
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+	}
+}

@@ -1,0 +1,27 @@
+
+.gauge{
+		@include distance();
+		.charts{
+			.title{
+				font-size: 28rpx;
+				color:rgba(60,60,60,1);	
+				text-align: center;
+				display: block;
+				line-height: 70rpx;
+				position: relative;
+				&::after{
+					position: absolute;
+					content: '';
+					left: 50%;
+					bottom: 0;
+					transform: translateX(-50%);
+					width: 40rpx;
+					height: 5rpx;
+					background:rgba(120,180,247,1);
+
+				}
+			}
+		}
+	
+}
+		
