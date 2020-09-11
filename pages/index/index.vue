@@ -3,12 +3,19 @@
 		hello world
 	</view>
 </template>
-
-<style scoped>
-	page{
+<!-- #ifdef MP-WEIXIN -->
+<style>
+	page {
 		height: 100%;
 	}
-	.home{
+</style>
+<!-- #endif -->
+<style scoped>
+	page {
+		height: 100%;
+	}
+
+	.home {
 		height: 100%;
 		display: flex;
 		align-items: center;

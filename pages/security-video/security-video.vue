@@ -6,13 +6,12 @@
 			<view :show="show === 1" :class="{active:show == 1}" @click="handleClick(1)">历史安防</view>
 		</view>
 		<view class="search">
-			<u-search placeholder="请输入关键字" :show-action="false" bg-color="#f7f7f7" input-align="center" v-model="searchKey" @change="handleFilter"></u-search>
+			<u-search placeholder="请输入关键字" :show-action="false" bg-color="#f7f7f7" input-align="center" v-model="searchKey" @change="handleFilter" style="width: 100%;"></u-search>
 		</view>
 		<view class="videoWrap">
 			<real v-show="show == 0" ref="real"></real>
 			<history v-show="show == 1" ref="history"></history>
 		</view>
-
 	</view>
 </template>
 
@@ -66,12 +65,16 @@
 				this.$nextTick(() => {
 					this.$refs['real'].getData()
 				})
-
 			}
 		}
 	}
 </script>
-
-<style scoped lang="scss" src="./css/security-video.scss">
-
+<!-- #ifdef MP-WEIXIN -->
+<style>
+	page{
+		height: 100%;
+	}
 </style>
+<!-- #endif -->
+<style scoped lang="scss" src="./css/security-video.scss"></style>
+

@@ -3,7 +3,6 @@ page {
 }
 .securityVideo{
 	height: 100%;
-	
 	.selector {
 		display: flex;
 		align-items: center;
@@ -11,6 +10,9 @@ page {
 		font-size: 30rpx;
 		position: fixed;
 		top: 44px;
+		/*#ifdef MP-WEIXIN */
+			top: 0px;
+		/* #endif */
 		left: 0;
 		width: 100%;
 		z-index: 9;
@@ -44,13 +46,14 @@ page {
 		box-sizing: border-box;
 		position: fixed;
 		top: 44px;
+		 /*#ifdef MP-WEIXIN */
+			top: 0px;
+		/* #endif */
 		margin-top: 80rpx;
 		z-index: 2;
-		
 	}
 	.videoWrap{
 		margin-top: 164rpx;
-
 	}
 }
 

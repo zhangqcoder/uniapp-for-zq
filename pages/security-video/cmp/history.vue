@@ -9,17 +9,14 @@
 				<view>事件：{{item.eventName}}</view>
 				<view>发生时间：{{item.dateTime}}</view>
 			</view>
-
 		</view>
-
 	</view>
 </template>
-
 <script>
 	export default {
 		data() {
 			var url =
-				"https://vdept.bdstatic.com/5a466c4165596d375959705679423270/7243734335363241/a43c90948fe6380e9a5f68492184c29ac3d8019fe563c158d39766a5d6445ee86efab9b839306aebafd36a84f8cf249d.mp4?auth_key=1597137220-0-0-b7d675e7b41e722a0f50b76973e6d559"
+				"http://1252093142.vod2.myqcloud.com/4704461fvodcq1252093142/f865d8a05285890787810776469/playlist.f3.m3u8"
 			return {
 
 				list: [{
@@ -79,7 +76,6 @@
 					}
 				],
 				cacheList: []
-
 			}
 		},
 		mounted() {
@@ -90,7 +86,6 @@
 				uni.navigateTo({
 					url: '/pages/security-video/video-player?url=' + url
 				})
-
 			},
 			handleFilter(key) {
 				var list = this.cacheList;
@@ -104,26 +99,21 @@
 					this.list = list
 				}
 			}
-
 		}
 	}
 </script>
-
 <style scoped lang="scss">
 	.history-video {
 		padding: 20rpx;
 		padding-top: 0;
 		box-sizing: border-box;
-
 	}
-
 	.video-list {
 		display: flex;
 		color: #B0B2B4;
 		box-sizing: border-box;
 		font-size: 30rpx;
 		border-bottom: 1rpx solid #EDEDED;
-		
 		padding: 30rpx 0;
 		.list {
 			display: flex;
@@ -135,7 +125,6 @@
 				color: #525252;
 			}
 		}
-
 		.image {
 			width: 157rpx;
 			height: 148rpx;
@@ -149,7 +138,6 @@
 				width: 36rpx;
 			}
 		}
-
 		&:nth-child(2n) {
 			margin-right: 0rpx;
 		}

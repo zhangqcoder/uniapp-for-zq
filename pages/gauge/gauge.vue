@@ -1,14 +1,13 @@
 <template>
 	<view class="gauge">
 		<view class="charts">
-			<text class="title">进厂水水质监测</text>
+			<text class="title">进监测</text>
 			<inCharts></inCharts>
 		</view>
 		<view class="charts">
-			<text class="title">出厂水水质监测</text>
+			<text class="title">出监测</text>
 			<outCharts></outCharts>
 		</view>
-
 	</view>
 </template>
 <script>

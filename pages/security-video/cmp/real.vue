@@ -4,15 +4,12 @@
 			<image src="/static/images/video/video.png"></image>
 			<view>{{item.name}}</view>
 		</view>
-
 	</view>
 </template>
-
 <script>
 	export default {
 		data() {
 			return {
-
 				list: [{
 						id: "a0",
 						name: "测试通道1",
@@ -28,8 +25,8 @@
 					},
 					{
 						id: "a2",
-						name: "武汉通道3",
-						siteName: "武汉研发中心",
+						name: "测试通道3",
+						siteName: "测试",
 						url: "http://1252093142.vod2.myqcloud.com/4704461fvodcq1252093142/f865d8a05285890787810776469/playlist.f3.m3u8"
 					},
 					{
@@ -63,7 +60,6 @@
 					}
 				],
 				cacheList: []
-
 			}
 		},
 		mounted() {
@@ -74,7 +70,6 @@
 				uni.navigateTo({
 					url: '/pages/security-video/video-player?url=' + url
 				})
-
 			},
 			handleFilter(key) {
 				var list = this.cacheList;
@@ -88,20 +83,16 @@
 					this.list = list
 				}
 			}
-
 		}
 	}
 </script>
-
 <style scoped lang="scss">
 	.real-video {
 		display: flex;
 		flex-wrap: wrap;
 		padding: 20rpx;
 		box-sizing: border-box;
-
 	}
-
 	.video-list {
 		width: calc(50% - 20rpx);
 		padding-left: 28rpx;
@@ -116,14 +107,12 @@
 		background: url(../../../static/images/video/bg.png) no-repeat;
 		background-size: 100% 100%;
 		height: 211rpx;
-
 		image {
 			width: 35rpx;
 			height: 40rpx;
 			margin-top: 23rpx;
 			margin-bottom: 20rpx;
 		}
-
 		&:nth-child(2n) {
 			margin-left: 20rpx;
 			margin-right: 0rpx;

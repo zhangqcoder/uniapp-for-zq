@@ -82,6 +82,9 @@
 					this.loop(fn, interval);
 				}, interval);
 			},
+			deepRender(t, o = {}) {
+				this.$refs[t].render(JSON.parse(JSON.stringify(o)));
+			},
 			getData() {
 				(this.dataModel = {
 					COD: 180,
@@ -96,11 +99,11 @@
 					).toFixed(2);
 				});
 				//深拷贝初始化图表配置，定义阈值数据缩放，仪表颜色
-				var o = JSON.parse(JSON.stringify(this.gaugeOption)),
+				let o = JSON.parse(JSON.stringify(this.gaugeOption)),
 					scale = 1.25,
 					sC = "#69ACFD",
 					eC = "#ED8A8A";
-				let oCOD = JSON.parse(JSON.stringify(({ ...o
+				this.deepRender('COD', ({ ...o
 					},
 					(o.title.text = "NTU"),
 					(o.title.subtext = "COD"),
@@ -110,10 +113,8 @@
 					(o.series[0].axisLine.lineStyle.color = [
 						[500 / (500 * scale), sC],
 						[1, eC],
-					])) && o))
-
-				this.$refs["COD"].render(oCOD);
-				let oNH3 = JSON.parse(JSON.stringify(({ ...o
+					])) && o)
+				this.deepRender('NH3-N', ({ ...o
 					},
 					(o.title.text = "mg/L"),
 					(o.title.subtext = "NH3-N"),
@@ -123,9 +124,8 @@
 					(o.series[0].axisLine.lineStyle.color = [
 						[45 / (45 * scale), sC],
 						[1, eC],
-					])) && o))
-				this.$refs["NH3-N"].render(oNH3);
-				let oTP = JSON.parse(JSON.stringify(({ ...o
+					])) && o)
+				this.deepRender('TP', ({ ...o
 					},
 					(o.title.text = "mg/L"),
 					(o.title.subtext = "TP"),
@@ -135,10 +135,8 @@
 					(o.series[0].axisLine.lineStyle.color = [
 						[8 / (8 * scale), sC],
 						[1, eC],
-					])) && o))
-
-				this.$refs["TP"].render(oTP);
-				let oTN = JSON.parse(JSON.stringify(({ ...o
+					])) && o)
+				this.deepRender('TN', ({ ...o
 					},
 					(o.title.text = "mg/L"),
 					(o.title.subtext = "TN"),
@@ -148,10 +146,8 @@
 					(o.series[0].axisLine.lineStyle.color = [
 						[70 / (70 * scale), sC],
 						[1, eC],
-					])) && o))
-
-				this.$refs["TN"].render(oTN);
-				let oPH = JSON.parse(JSON.stringify(({ ...o
+					])) && o)
+				this.deepRender('PH', ({ ...o
 					},
 					(o.title.text = ""),
 					(o.title.subtext = "PH"),
@@ -162,13 +158,10 @@
 						[0.2, eC],
 						[9 / (9 * scale), sC],
 						[1, eC],
-					])) && o))
-
-				this.$refs["PH"].render(oPH);
+					])) && o)
 			},
 		},
 		mounted() {
-			
 			this.getData()
 			this.loop(this.getData, 3000);
 		},
@@ -181,23 +174,19 @@
 <style lang="scss" scoped>
 	.swiper {
 		height: 460upx;
-
 		.chart-view {
 			@include flex(space-between);
 			height: 82%;
 			margin-top: 20upx;
-
 			.chart {
 				height: 100%;
 				border: 1px solid #dee1e6;
 				width: calc(50% - 9upx);
 				text-align: center;
-
 				.chart-model {
 					position: relative;
 					top: -30upx;
 				}
-
 				text {
 					position: relative;
 					bottom: 80upx;

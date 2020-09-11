@@ -3,9 +3,7 @@
 		<view class="datePickerComb">
 			<datePickerComb @getDate="getDate" @getCycle="getCycle" @revoke="getDate" @dateRelaChange="getDate" @refresh="getData"></datePickerComb>
 		</view>
-
 		<chart ref="chart" class="chart" :style="{height:`${CH}px`}"></chart>
-
 	</view>
 </template>
 <script>
@@ -76,13 +74,11 @@
 					series: [],
 					yAxis: []
 				};
-
 				let res = mock;
 				//如果传来多个测点，让toolTip位置自适应，取消强制左右显示；
 				if (mock.length > 1) {
 					option.tooltip.position = null;
 				}
-
 				if (res && Array.isArray(res.items) && res.items.length > 0) {
 					var _this = this;
 					var datas = res.items;
@@ -134,7 +130,6 @@
 							});
 						} else {
 							option.xAxis.push({
-
 								data: xData,
 								gridIndex: i,
 								axisTick: {
@@ -162,7 +157,6 @@
 
 							});
 						}
-
 						//生成图表yAxis,格式化m³单位
 						if (e.unit == null) {
 							e.unit = ""
@@ -203,14 +197,11 @@
 							xAxisIndex: i,
 							yAxisIndex: i,
 						});
-
 					});
 					_this.$refs['chart'].render(option)
 					uni.hideLoading();
 					uni.stopPullDownRefresh()
 				}
-
-
 			},
 			//计算图表GRID所处的位置
 			calcGrid(i) {
@@ -249,10 +240,15 @@
 					}).exec()
 				}
 			}).exec()
-
 		}
 	}
 </script>
-
+<!-- #ifdef MP-WEIXIN -->
+<style>
+	page{
+		height: 100%;
+	}
+</style>
+<!-- #endif -->
 <style scoped lang="scss" src="./css/curve.scss">
 </style>

@@ -3,7 +3,6 @@
 		<view class="header">
 			<image src="/static/images/login/logo.png"></image>
 		</view>
-
 		<view class="list">
 			<view class="listCall">
 				<image class="img" src="/static/images/login/1.png"></image>
@@ -13,19 +12,15 @@
 				<image class="img" src="/static/images/login/2.png"></image>
 				<input class="finput" v-model="password" type="text" maxlength="32" placeholder="输入密码" password="true" />
 			</view>
-
 		</view>
-
 		<view class="login">
 			<u-button shape="circle" type="primary" @click="login">登录</u-button>
 		</view>
-
 		<view class="rememberMe">
 			<u-checkbox v-model="rememberMe" name="记住密码" class="rememberMe">记住密码</u-checkbox>
 		</view>
 	</view>
 </template>
-
 <script>
 	export default {
 		data() {

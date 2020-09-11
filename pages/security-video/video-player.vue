@@ -3,7 +3,6 @@
 		<view class="video-js vjs-default-skin vjs-big-play-centered" v-html="videoHtml"></view>
 	</view>
 </template>
-
 <script>
 	export default {
 		data() {
@@ -43,7 +42,6 @@
 				
 				`
 			}
-
 		},
 		onReady() {
 			if (this.url) {
@@ -92,25 +90,18 @@
 				});
 				this.player.play();
 			}
-
 		},
 		destroyed() {
 			this.player.dispose()
 		},
-
-
 	}
 </script>
-
 <style scoped lang="scss">
-	
 	page {
 		height: 100%;
-
 		.video-player {
 			height: 100%;
 			width: 100%;
-
 			view {
 				height: 100%;
 				width: 100%;
